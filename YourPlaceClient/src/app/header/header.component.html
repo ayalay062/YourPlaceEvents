@@ -1,0 +1,31 @@
+<ol class="breadcrumb">
+    <button mat-button routerLink="about" routerLinkActive="active_link">About Us </button><span>|</span>
+    <button mat-button routerLink="login" routerLinkActive="active_link">Login </button><span>|</span>
+    <button mat-button routerLink="new-user" routerLinkActive="active_link">Register </button><span>|</span>
+    <button mat-button (click)="onLogout()" routerLinkActive="active_link">Logout</button>
+    <div class="logo"></div>
+
+
+</ol>
+<ol *ngIf="isLoggedIn$ | async as isLoggedIn" class="breadcrumb-sub">
+
+    <!-- <li class="breadcrumb-item"><a routerLink="/about">About YourPlace</a></li> -->
+    <!-- <li class="breadcrumb-item"><a routerLink="/login">Login</a></li> -->
+    <!-- <li class="breadcrumb-item"><a routerLink="/new-user">New User</a></li> -->
+    <li class="breadcrumb-item"><a routerLink="/new-event" routerLinkActive="active_link2">New Event</a></li>
+    <li class="breadcrumb-item"><a routerLink="/view-event" routerLinkActive="active_link2">Edit Event</a></li>
+    <li class="breadcrumb-item"><a routerLink="/add-guest" routerLinkActive="active_link2">Add Guest</a></li>
+    <li class="breadcrumb-item"><a routerLink="/upload-xl" routerLinkActive="active_link2">uplaod Excel file</a></li>
+    <li class="breadcrumb-item"><a routerLink="/list-guests" routerLinkActive="active_link2"> Guest List</a></li>
+    <li class="breadcrumb-item"><a routerLink="/confirm-participation" routerLinkActive="active_link2">Confirn Participation</a></li>
+    <li class="breadcrumb-item"><a routerLink="/seating-arrangement" routerLinkActive="active_link2">Seating arrangement</a></li>
+    <li class="breadcrumb-item"><a routerLink="/reminders" routerLinkActive="active_link2">Reminders</a></li>
+
+    <!-- <button mat-button routerLink="login">Login</button>
+        <button mat-button (click)="onLogout()">Logout</button> -->
+    <!-- <li class="breadcrumb-item"><a routerLink="/edit-guest">עריכת אורח </a></li> -->
+    <!-- <li class="breadcrumb-item"><a routerLink="/new-event2">categories</a></li> -->
+    <!-- <li class="breadcrumb-item"><a routerLink="/about">About YourPlace</a></li> -->
+    <!-- <li class="breadcrumb-item active">Courses</li> -->
+
+</ol>

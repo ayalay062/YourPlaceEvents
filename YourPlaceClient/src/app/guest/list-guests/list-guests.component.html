@@ -1,0 +1,38 @@
+<div class="form-wrapper-large col-md-10 container-fluid" style="max-width: 1000px;">
+    <h1 style="min-width:200px"> Guests Details</h1>
+    <br>
+    <div class="header-wrapper">
+        <button class="btn-color btn-smaller" (click)="addGuest()">Add Guest</button>
+        <button class="btn-gold btn-smaller" style="margin-left: 10%;" (click)="exportAsXLSX()">Export</button>
+    </div>
+    <br>
+    <p style="font-size:14px;">*Exportan excel file of type .xslx by clicking the below button</p>
+    <table style="width:100%;color: #310166;" class="table table-striped">
+        <thead>
+            <tr>
+                <th class="hidden">Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Message before name</th>
+                <th>Message after name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let g of guests">
+                <td class="hidden"></td>
+                <td>{{g.guest_first_name}}</td>
+                <td>{{g.guest_last_name}}</td>
+                <td>{{g.gender}}</td>
+                <td>{{g.guest_email}}</td>
+                <td>{{g.guest_message_befor}}</td>
+                <td>{{g.guest_message_after}}</td>
+                <td>
+                    <button class="btn btn-success" (click)="deleteGuest(g)"> Delete</button>
+                    <button class="btn btn-success" (click)="editGuest(g)"> Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

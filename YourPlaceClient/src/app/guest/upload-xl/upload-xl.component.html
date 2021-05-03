@@ -1,0 +1,83 @@
+<div class="form-wrapper-large col-md-10 container-fluid" style="max-width: 1000px;">
+    <h1 style="min-width:250px"> Upload Excel file</h1>
+    <br>
+    <div class="row">
+
+
+        <div class="col-md-6 custom-file-upload-wrapper">
+            <label class="custom-file-upload" for="uploadExcel">
+    <mat-icon>insert_drive_file</mat-icon>
+    <input type="file"/>
+    Upload file
+</label>
+            <div class="custom-file-upload-name-wrapper">
+                <label class="custom-file-upload-name" *ngIf="fileName1">{{fileName1}}</label>
+                <label class="custom-file-upload-name" *ngIf="!fileName1">No file selected</label>
+            </div>
+        </div>
+
+        <input style="color:#310166;" type="file" (change)="uploadExcel($event)" id="uploadExcel">
+    </div>
+    <br>
+    <div class="row">
+
+
+        <div class="col-md-6 custom-file-upload-wrapper">
+            <label class="custom-file-upload" for="uploadExcelCat">
+    <mat-icon>insert_drive_file</mat-icon>
+    <input type="file"/>
+    Upload file
+</label>
+            <div class="custom-file-upload-name-wrapper">
+                <label class="custom-file-upload-name" *ngIf="fileName2">{{fileName2}}</label>
+                <label class="custom-file-upload-name" style="max-width: 200px;" *ngIf="!fileName2"> No file selected קטגוריות</label>
+            </div>
+        </div>
+
+        <input style="color:#310166;" type="file" (change)="uploadExcelCat($event)" id="uploadExcelCat">
+    </div>
+
+
+    <!-- <div class="text-center">
+        לא עובד לטעון 2 גליונות
+        <input style="color: #310166;" type="file" (change)="uploadExcelCat($event)">
+    </div> -->
+    <table style="width:100%;color: #310166;" class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Guest FirstName</th>
+                <th>Guest LastName</th>
+                <th>Guest gender</th>
+                <th>Guest Email</th>
+                <th>Guest essage Before</th>
+                <th>Guest message After</th>
+                <th>Guest category</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let guest of guests; let i = index">
+                <td>{{i+1}}
+
+                </td>
+                <td>{{guest.guest_first_name}}</td>
+                <td>{{guest.guest_last_name}}</td>
+                <td>{{guest.gender}}</td>
+                <td>{{guest.guest_email}}</td>
+                <td>{{guest.guest_message_befor}}</td>
+                <td>{{guest.guest_message_after}}</td>
+                <td>{{guest.guest_category_id}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tr *ngFor="let c of cat">
+            <td>{{c}}</td>
+        </tr>
+    </table>
+    <div class="footer-wrapper">
+        <button class="btn-color btn-smaller" (click)="AddAllGuests(guests)">   Add all</button>
+
+    </div>
+</div>

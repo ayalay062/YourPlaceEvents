@@ -1,0 +1,57 @@
+<div class="form-wrapper-large col-md-6 container-fluid">
+    <h1>Reminders</h1>
+    <br>
+    <form [formGroup]="addForm" novalidate #a="ngForm" (ngSubmit)="onSend(a)">
+
+        <div class="row">
+            <div class="col-md-6 custom-file-upload-wrapper">
+                <label class="custom-file-upload" for="Reminder">
+                <mat-icon>insert_drive_file</mat-icon>
+                <input type="file"/>
+                Upload file
+            </label>
+                <div class="custom-file-upload-name-wrapper">
+                    <label class="custom-file-upload-name" *ngIf="file && file.name">{{file.name}}</label>
+                    <label class="custom-file-upload-name" *ngIf="!file">No file selected</label>
+                </div>
+            </div>
+
+            <input class="form-control text-center col-md-4" style="border: none;" type="file" (change)="onChange($event)" formControlName="Reminder" id="Reminder" autocomplete="off">
+            <div class="text-center col-md-6">
+
+                <button (click)="onUploadReminder()" class="btn-gold btn-smaller"> 
+            Upload 
+        </button>
+            </div>
+            <span class="text-center" style="font-size: 14px;margin: 10px;">*Uploading reminders from PC </span>
+
+            <!-- Shareable short link of  uoloaded file -->
+            <div class="container text-center jumbotron" *ngIf="shortLink">
+                <h2> Visit Here</h2>
+                <a href="{{shortLink}}">{{shortLink}}</a>
+            </div>
+
+            <!--Flag variable is used here-->
+            <div class="container" *ngIf="loading">
+                <h3>Loading ...</h3>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="subject">Enter subject for your mail:</label>
+            <input type="text" formControlName="subject" name="subject" class="form-control" id="subject">
+        </div>
+        <div class="form-group">
+            <label for="body1">Enter body for your mail:</label>
+            <textarea rows="4" formControlName="body1" style="height: auto;" name="body1" class="form-control" id="body1"></textarea>
+        </div>
+
+        <div class="footer-wrapper">
+            <button class="btn-color btn-smaller" style="width: 100%;margin-top: 2%;" (click)="sendInvitationToAll()">Send invitation to all</button>
+            <button class="btn-color btn-smaller" style="width: 100%;margin-top: 2%;" (click)="sendReminderToAll()">Send reminder to all</button>
+            <button class="btn-color btn-smaller" style="width: 100%;margin-top: 2%;" (click)="sendToConfirmed()">Send to guests that Confirmed</button>
+            <button class="btn-color btn-smaller" style="width: 100%;margin-top: 2%;" (click)="sendToNotConfirmed()">Send to guests that didnt confirm</button>
+
+        </div>
+
+    </form>
+</div>

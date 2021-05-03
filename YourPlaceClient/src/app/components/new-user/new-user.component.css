@@ -1,0 +1,19 @@
+.bg {
+  /* background-image: url("/assets/images/old-wooden-armchair.jpg");
+    background-repeat: round;
+    background-position: 100%; */
+  background-color: rgb(250, 233, 236);
+}
+.pic {
+  background-image: url("/assets/images/logochair.jpg");
+  background-repeat: no-repeat;
+  background-position: 20%;
+}
+h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  size: 10%;
+  font-size: large;
+  color: rgb(129, 6, 6);
+  margin-left: 50%;
+}

@@ -1,0 +1,59 @@
+<div class="form-wrapper-large col-md-10 container-fluid" style="max-width: 700px;">
+    <h1> Add Guest</h1>
+
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()" style="font-size: large;">
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="guest_first_name">Guest first name:</label>
+                <input type="text" formControlName="guest_first_name" [class.is-invalid]="addForm.get('guest_first_name').invalid && addForm.get('guest_first_name').touched" placeholder="first name" name="guest_first_name" class="form-control" id="guest_first_name">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="guest_last_name"> Guest last name:</label>
+                <input type="text" formControlName="guest_last_name" [class.is-invalid]="addForm.get('guest_last_name').invalid && addForm.get('guest_last_name').touched" placeholder="last name" name="guest_last_name" class="form-control" id="guest_last_name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="guest_email">guest email address:</label>
+                <input type="email" formControlName="guest_email" [class.is-invalid]="addForm.get('guest_email').invalid && addForm.get('guest_email').touched" placeholder="guest email " name="guest_email" class="form-control" id="guest_email">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="gender">Gender (male/female) </label><br>
+                <select class="form-control">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+                <!-- <input type="text" formControlName="gender" placeholder="gender" name="gender" class="form-control" id="gender"> -->
+            </div>
+        </div>
+        <div class="row">
+
+
+            <div class="form-group col-md-6">
+                <label for="guest_message_befor">Message before the name:</label>
+                <input type="text" formControlName="guest_message_befor" placeholder="message before" name="guest_message_befor" class="form-control" id="guest_message_befor">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="guest_message_after">Message after the name:</label>
+                <input type="text" formControlName="guest_message_after" placeholder="message after" name="guest_message_after" class="form-control" id="guest_message_after">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6" name="guest_category_id">
+                <label dor="guest_category_id">Guest catagory</label>
+                <select class="form-control">
+                <option *ngFor="let mes of catagoryList" [value]="mes.Id">
+                    {{mes.Des}}
+                </option>
+            </select>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <button class="btn-color" (click)="onSubmit()">Add Guest</button>
+        </div>
+    </form>
+</div>

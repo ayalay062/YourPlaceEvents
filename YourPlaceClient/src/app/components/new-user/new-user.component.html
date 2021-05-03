@@ -1,0 +1,63 @@
+<div class="form-wrapper-large col-md-6 container-fluid">
+    <h1>Register</h1>
+    <form [formGroup]="newUserForm" style="font-size: medium;">
+        <div class="form-group" name="user_first_name">
+            <label for="user_first_name"> First name:</label>
+            <input [class.is-invalid]="newUserForm.get('user_first_name').invalid && newUserForm.get('user_first_name').touched" type="text" class="form-control" formControlName="user_first_name" placeholder="first name" />
+            <!-- <div  *ngIf="newUserForm.controls['user_first_name'].hasError('required') && newUserForm.controls['user_first_name'].touched">
+                NumPlacesAroundATable is required</div> -->
+            <div *ngIf="(user_first_name.invalid && user_first_name.touched) || user_first_name.dirty">
+                <small *ngIf="user_first_name.errors?.required" class="text-danger error">Enter first name</small>
+                <!--question mark(?) is a safe navigation operator-->
+                <small *ngIf="user_first_name.errors?.pattern" class="text-danger error">First name not valid</small>
+            </div>
+        </div>
+        <div class="form-group" name="user_last_name">
+            <label for="user_last_name"> Last name:</label>
+            <input [class.is-invalid]="newUserForm.get('user_last_name').invalid && newUserForm.get('user_last_name').touched" type="text" class="form-control" formControlName="user_last_name" placeholder="last name" />
+            <div *ngIf="(user_last_name.invalid && user_last_name.touched) || user_last_name.dirty">
+                <small *ngIf="user_last_name.errors?.required" class="text-danger error">Enter last name</small>
+                <!-- question mark(?) is a safe navigation operator -->
+                <small *ngIf="user_last_name.errors?.pattern" class="text-danger error">Last name not valid </small>
+            </div>
+        </div>
+        <div class="form-group" name="user_phone_number">
+            <label for="user_phone_number"> Phone number</label>
+            <input [class.is-invalid]="newUserForm.get('user_phone_number').invalid && newUserForm.get('user_phone_number').touched" type="tel" class="form-control" formControlName="user_phone_number" placeholder="phone number" />
+            <div *ngIf="(user_phone_number.invalid && user_phone_number.touched) || user_phone_number.dirty">
+                <small *ngIf="user_phone_number.errors?.required" class="text-danger error">Enter number</small>
+                <!--question mark(?) is a safe navigation operator-->
+                <small *ngIf="user_phone_number.errors?.pattern" class="text-danger error">Number not valid </small>
+            </div>
+        </div>
+        <div class="form-group" name="user_email">
+            <label for="user_email">Email address:</label>
+            <input [class.is-invalid]="newUserForm.get('user_email').invalid && newUserForm.get('user_email').touched" type="email" class="form-control" formControlName="user_email" placeholder="user email" />
+            <div *ngIf="(user_email.invalid && user_email.touched) || user_email.dirty">
+                <small *ngIf="user_email.errors?.required" class="text-danger error">Enter email</small>
+                <!--question mark(?) is a safe navigation operator-->
+                <small *ngIf="user_email.errors?.pattern" class="text-danger error">Email not valid</small>
+            </div>
+        </div>
+        <div class="form-group" name="user_password">
+            <label for="user_password">Password:</label>
+            <input [class.is-invalid]="newUserForm.get('user_password').invalid && newUserForm.get('user_password').touched" type="password" formControlName="user_password" class="form-control" placeholder="user password" />
+            <div *ngIf="(user_password.invalid && user_password.touched) || user_password.dirty">
+                <small *ngIf="user_password.errors?.required" class="text-danger error">  Enter pasword</small>
+                <small *ngIf="user_password.errors?.pattern" class="text-danger error">Pasword not valid</small>
+            </div>
+        </div>
+        <div class="form-group" name="הכנס סיסמה">
+            <label for="user_confirmPassword">Varify password:</label>
+            <input [class.is-invalid]="newUserForm.get('user_confirmPassword').invalid && newUserForm.get('user_confirmPassword').touched" type="password" formControlName="user_confirmPassword" class="form-control" placeholder="confirm password" />
+            <div *ngIf="(user_confirmPassword.invalid && user_confirmPassword.touched) || user_confirmPassword.dirty">
+                <small *ngIf="user_confirmPassword.errors?.required" class="text-danger error"> Enter password</small>
+                <small *ngIf="user_confirmPassword.errors?.pattern" class="text-danger error">Pasword not valid</small>
+            </div>
+        </div>
+        <br>
+        <div class="footer-wrapper"><input type="button" class="btn-color" (click)="onSubmit()" value="Register" />
+        </div>
+
+    </form>
+</div>

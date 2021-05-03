@@ -1,0 +1,27 @@
+<div class="form-wrapper col-md-6 container-fluid">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" style="font-size: large; ">
+        <div class="form-group" name="useremail">
+            <label for="useremail">User email</label>
+            <input type="text" class="form-control" formControlName="useremail" [class.is-invalid]="loginForm.get('useremail').invalid && loginForm.get('useremail').touched" placeholder="user email" id="useremail" />
+        </div>
+
+        <div class="form-group" name="password">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" formControlName="password" [class.is-invalid]="loginForm.get('password').invalid && loginForm.get('password').touched" placeholder="user password" id="password" />
+        </div>
+        <br>
+        <div class="form-group">
+            <button [disabled]="!loginForm.valid" class="btn-color" (click)="onSubmit()">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+
+            <button [disabled]="loading" class="btn-gold" style="width:100px;float:right" (click)="register()">Register</button>
+        </div>
+    </form>
+</div>
+<!-- </body>
+
+
+</html> -->

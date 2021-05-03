@@ -1,0 +1,385 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.btn-color,
+.mat-raised-button.btn-color,
+.mat-button.btn-color {
+    min-width: 100px;
+    padding: 3px 20px;
+    font-size: 16px;
+    line-height: 28px;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    background: #310166;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+    height: auto;
+    box-shadow: none;
+    transition: 2s linear all;
+}
+
+.btn-gold,
+.mat-raised-button.btn-gold,
+.mat-button.btn-gold {
+    min-width: 100px;
+    padding: 3px 20px;
+    font-size: 16px;
+    line-height: 28px;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    background: #ffb100;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+    height: auto;
+    box-shadow: none;
+    transition: 2s linear all;
+}
+
+.btn-color.btn-smaller,
+.mat-raised-button.btn-color.btn-smaller,
+.mat-button.btn-color.btn-smaller,
+.btn-gold.btn-smaller,
+.mat-raised-button.btn-gold.btn-smaller,
+.mat-button.btn-gold.btn-smaller {
+    padding: 4px 14px;
+    font-size: 14px;
+    line-height: 20px;
+    border: none;
+}
+
+.btn-color:hover,
+.btn-gold:hover {
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.btn-gold:disabled {
+    background-color: #ccc;
+    color: white;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-image: url('assets/images/bg.jpg');
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.breadcrumb-sub {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    list-style: none;
+    background-color: #ffb100;
+    border-radius: .25rem;
+    position: relative;
+    margin-top: -1.1rem;
+    margin-bottom: 1.3rem;
+    color: white;
+}
+
+.breadcrumb-sub .breadcrumb-item a {
+    color: white;
+    font-weight: 100;
+}
+
+.breadcrumb-sub .breadcrumb-item+.breadcrumb-item::before {
+    color: white;
+}
+
+.breadcrumb {
+    background-color: white;
+    color: #310166;
+    border-radius: 0%;
+    min-height: 72px;
+    border-bottom: 1px solid;
+}
+
+.breadcrumb span {
+    line-height: 48px;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.breadcrumb button span {
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 48px;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.breadcrumb button:hover {
+    background: #ffb100;
+    color: white!important;
+    outline: none;
+    border: 0;
+    border-radius: 0;
+}
+
+.breadcrumb button:hover span {
+    color: white!important;
+}
+
+.breadcrumb button:focus {
+    outline: none;
+}
+
+.breadcrumb button.active_link span.mat-button-wrapper {
+    color: #ffb100;
+    border-bottom: #ffb100 2px solid;
+    font-weight: 500;
+}
+
+.breadcrumb .logo {
+    background: url(assets/images/YourPlaceLogo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: -30px;
+    margin-top: -4px;
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    z-index: 1;
+    width: 79px;
+    height: 79px;
+}
+
+.breadcrumb-sub .breadcrumb-item a.active_link2 {
+    font-weight: 500!important;
+    border-bottom: 2px solid;
+}
+
+.form-wrapper,
+.form-wrapper-large {
+    text-align: left;
+    margin: 0px auto;
+    background-color: #fff;
+    opacity: 0.8;
+    direction: ltr;
+    color: #310166!important;
+    position: relative;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: -20px;
+    padding: 50px;
+    max-width: 500px;
+}
+
+.form-wrapper-large {
+    padding: 20px 50px!important;
+}
+
+.form-wrapper .form-control,
+.form-wrapper-large .form-control {
+    border-color: #310166;
+}
+
+.form-wrapper-large .form-control {
+    height: calc(1.4em + .55rem + 2px);
+}
+
+button:focus,
+span:focus,
+input:focus {
+    outline: none!important;
+}
+
+.form-wrapper-large h1 {
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 28px;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+    line-height: 44px;
+    width: 150px;
+    margin: auto;
+}
+
+.form-wrapper h1 {
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 32px;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+    line-height: 50px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.form-wrapper label {
+    font-weight: 100;
+    font-size: medium;
+    margin-bottom: .3rem;
+}
+
+.form-wrapper-large label {
+    font-size: small;
+    margin-bottom: 0;
+    font-weight: 100;
+}
+
+.footer-wrapper,
+.header-wrapper {
+    text-align: center;
+    width: 100%
+}
+
+.error {
+    font-size: 11px;
+    color: red;
+    margin-bottom: -15px;
+    margin-top: -3px;
+    margin-left: 1px;
+}
+
+small {
+    font-size: 100%;
+}
+
+.mat-dialog-container {
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.mat-dialog-container .mat-dialog-content {
+    max-height: 100%;
+    overflow-x: hidden;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mat-dialog-content h4 {
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 18px;
+    border-bottom: 1px solid #ffb100;
+    line-height: 34px;
+    width: 150px;
+    color: #ffb100;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.category-wrapper {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.category-item {
+    border: 1px solid;
+    border-radius: 50px;
+    width: auto;
+    color: #ffb100;
+    padding: 4px 8px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid;
+    display: inline-block;
+    padding: 4px 0px 0px 4px;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: small;
+    width: 100px;
+}
+
+.custom-file-upload .mat-icon {
+    vertical-align: middle;
+    font-size: 18px;
+    margin-top: 4px;
+    margin-right: -5px;
+}
+
+.custom-file-upload-name {
+    font-size: 10px!important;
+    padding: 0 0 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
+    vertical-align: bottom;
+}
+
+.custom-file-upload-wrapper {
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.custom-file-upload-name-wrapper {
+    max-width: 100px;
+    display: inline-block;
+}

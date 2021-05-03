@@ -1,0 +1,80 @@
+<div class="form-wrapper-large col-md-10 container-fluid" style="max-width: 700px;">
+    <h1>Edit Event</h1>
+</div>
+<!-- 
+<body class="bg">
+
+<div class="container-fluid">
+  <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;size: 5px;color: brown;margin-left: 50%;">New
+    event</h2>
+  <form [formGroup]="EEvent" style="font-size: large;">
+
+    <div class="form-group" name="event_des">
+      <label for="event_des">event name</label>
+      <input type="text" class="form-control" placeholder="event_des" formControlName="event_des" id="event_des" autocomplete="off">
+      <div class="error"
+        *ngIf="EEvent.controls['event_des'].hasError('required') && EEvent.controls['event_des'].touched">EventDes
+        is required</div>
+    </div>
+
+
+    <div></div>
+    <div class="form-group" name="event_date">
+      <label for="event_date">event date:
+      </label>
+      <input type="date" class="form-control" placeholder="event_date" formControlName="event_date" id="event_date" autocomplete="off">
+      <div class="error"
+        *ngIf="EEvent.controls['event_date'].hasError('required') && EEvent.controls['event_date'].touched">
+        EventDate is required</div>
+    </div>
+
+    <div class="form-group" name="invitation_file">
+      <div class="text-center">
+        <input class="form-control" type="file" (change)="onChange($event)" formControlName="invitation_file" id="invitation_file"
+          autocomplete="off">
+
+        <button (click)="onUpload()" class="btn btn-success">
+          Upload
+        </button>
+      </div>
+
+      <div class="container text-center jumbotron" *ngIf="shortLink">
+        <h2> Visit Here</h2>
+        <a href="{{shortLink}}">{{shortLink}}</a>
+      </div>
+
+      <div class="container" *ngIf="loading">
+        <h3>Loading ...</h3>
+      </div>
+
+    </div>
+
+    <div class="form-group" name="due_date">
+      <label for="due_date">last date to confirm-participation:
+      </label>
+      <input type="date" class="form-control" formControlName="due_date" id="due_date" autocomplete="off">
+    </div>
+
+
+    <div class="form-group" name="num_tables">
+      <label for="num_tables">number of tables:
+      </label>
+      <input type="number" class="form-control" placeholder="num_tables" formControlName="num_tables" id="num_tables" autocomplete="off">
+      <div class="error"
+        *ngIf="EEvent.controls['num_tables'].hasError('required') && EEvent.controls['num_tables'].touched">
+        NumTables is required</div>
+    </div>
+
+    <div class="form-group" name="NumPlacesAroundATable">
+      <label for="EventDueDate">Number of seats around table:
+      </label>
+      <input type="number" class="form-control" placeholder="num_places_around_a_table" formControlName="num_places_around_a_table" id="num_places_around_a_table"
+        autocomplete="off">
+      <div class="error"
+        *ngIf="EEvent.controls['num_places_around_a_table'].hasError('required') && EEvent.controls['num_places_around_a_table'].touched">
+        NumPlacesAroundATable is required</div>
+    </div>
+    <button class="btn btn-success"  (click)="EditEvent(event)" [disabled]="!EEvent.valid">Update Event</button>
+  </form>
+</div>
+</body> -->

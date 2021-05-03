@@ -1,0 +1,28 @@
+/* body,
+html {
+  height: 90%;
+}
+.mat-stepper-vertical {
+  margin-top: 8px;
+}
+h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  size: 6px;
+  color: rgb(33, 10, 97);
+  text-shadow: darkred;
+  text-shadow:10%;
+  margin-left: 50%;
+}
+.mat-form-field {
+  margin-top: 16px;
+}
+form{
+  width: 70%;
+  text-align: left;
+  float: none;
+  margin-bottom: 5%;
+  margin-left: 20%;
+text-shadow: 5%;
+color: rgb(0, 0, 36);
+}
+ */
